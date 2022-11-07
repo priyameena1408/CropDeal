@@ -1,0 +1,32 @@
+body {
+    background: rgb(217, 203, 222)
+}
+.labels {
+    font-size: 11px
+}
+
+.card{
+    width: 50%;
+    padding: 15px;
+    margin:auto;
+    background: rgb(174, 212, 241);
+    background: linear-gradient(90deg, rgb(196, 224, 245) 0%, rgb(196, 210, 247)100%);
+}
+
+img{
+    height: 80%;
+    width: 80%;
+}
+.row{
+
+    background-color: aquamarine;
+}
+.outer-div{
+    height: 80%;
+}
+
+.mat-raised-button.mat-success{
+    color: #f0fff3;
+    background-color:rgb(175, 137, 189);
+    width:95px;
+}

@@ -1,0 +1,49 @@
+/* .card{
+    border: none;
+    width: 40%;
+    padding: 15px;
+    position: absolute;
+   
+    background: rgb(198, 228, 251);
+    background: linear-gradient(90deg, rgb(198, 228, 251) 0%, rgb(224, 213, 250) 100%);
+} */
+.card{
+    border: none;
+    width: 40%;
+    height: max-content;
+    padding:40px 60px 40px;
+    position:relative;
+    margin: auto;
+    background: rgb(174, 212, 241);
+    background: linear-gradient(90deg, rgb(174, 212, 241) 0%, rgb(203, 183, 245) 100%);
+  }
+.card h2{
+    color: #fff;
+}
+
+.bolded{
+    /* font-weight: bold; */
+    color: #728FCE;
+}
+
+.mat-raised-button.mat-success{
+    color: #f0fff3;
+    background-color: #059527;
+    width:80px;
+}
+
+.mat-raised-button.mat-danger{
+    color: #f0fff3;
+    background-color:#F93154;
+    width: auto;
+}
+
+.mat-raised-button.mat-warning{
+    color: #f0fff3;
+    background-color:#FFA900;
+    width: auto;
+}
+
+section {
+  display: table;
+}

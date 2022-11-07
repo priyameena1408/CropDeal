@@ -1,0 +1,43 @@
+<head><link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+</head>
+
+<div style="padding-bottom:180px;">
+   <div class="col-md-6 mx-auto mt-5">
+      <div class="card">
+         <div class="payment_header">
+            <div class="check"><i class="fa fa-check" aria-hidden="true"></i></div>
+         </div>
+         <div class="content">
+           <h1 class="card-title">Payment Success !!</h1>
+           <h4 class="card-text">Thank you for purchasing Crop at CropDeal! Your payment has been confirmed.</h4>
+            <p><a href="https://mail.google.com/" class="card-link" target="_blank">For more information, check your registered mail..</a></p>            
+            <form [formGroup]="ngForm" (ngSubmit)="onSubmit()">
+
+               <div class="form-group mb-3 mt-6">
+                 <label class="form-label">Rate Your Farmer</label>
+                 <select type="text" class="form-select" formControlName="totalRating" aria-label="Default select example">
+                   <option selected value="">Select rating</option>
+                   <option value="1">1</option>
+                   <option value="2">2</option>
+                   <option value="3">3</option>
+                   <option value="4">4</option>
+                   <option value="5">5</option>
+                 </select>                 
+               </div>
+               
+               <div class="form-group mb-3">
+                 <label class="form-label">Review</label>
+                 <input type="text" formControlName="Review" class="form-control" >
+               </div>
+   
+               <div class="example-button-row form-group">
+                  <button type="submit" mat-raised-button color="success">Save</button>&nbsp; &nbsp;
+                  <button mat-raised-button color="danger" type="reset">Cancel</button> &nbsp; &nbsp;                                                   
+                  <button mat-raised-button href="/crop-details" class="mt-2" routerLink="/dealerhome">Go to Home</button>
+               </div>  
+            </form>
+         </div>       
+      </div>
+   </div>
+</div>

@@ -1,0 +1,45 @@
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+<div class = "card-wrapper">
+    <div class = "card">
+      <!-- card left -->
+      <div class = "product-imgs">
+        <img class="rounded w-full object-cover object-center mx-4" src="{{singleCrop.cropImg}}" alt="Image Size 720x400">
+      </div>
+
+      <!-- card right -->
+      <div class = "product-content">
+        <h1 class = "product-title font-medium title-font text-gray-900"></h1>
+        <div class="h-1 w-30 bg-indigo-500 rounded"></div>
+        <div class = "product-price">
+          <section>
+            <p class="new-price tracking-widest font-medium title-font">Price: <span><i class='fa fa-rupee red-color'>{{singleCrop.cropExpectedPrice}}</i></span></p>
+            <div class="example-button-row">
+              <button (click)="onPay()" mat-raised-button color="success">Pay now </button>
+            </div>
+          </section>
+        </div>
+
+        <div class = "product-detail">
+          <h2 class="mb-0 ">About crop : </h2>
+          <p leading-relaxed text-base>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio amet soluta officiis omnis, earum impedit.</p>          
+          <ul>           
+            <li><span class="material-icons" style="font-size: 12px; color: rgb(0, 128, 55);"> check_circle </span> Quantity available: <span>{{singleCrop.cropQtyAvailable}}</span></li>
+            <li><span class="material-icons" style="font-size: 12px; color: rgb(0, 128, 55);"> check_circle </span> Location: <span>{{singleCrop.cropLocation}}</span></li>
+            
+
+            <li ><span class="material-icons" style="font-size: 12px; color: rgb(0, 128, 55);" > check_circle </span> Category: <span>{{singleCrop.cropType}}</span></li>
+
+            <li><span class="material-icons" style="font-size: 12px; color: rgb(0, 128, 55);"> check_circle </span> Farmer: <span>{{singleCrop.farmerName}}</span></li>
+            <li><span class="material-icons" style="font-size: 12px; color: rgb(0, 128, 55);"> check_circle </span> Farmer Email: <span>{{singleCrop.farmerEmail}}</span></li>
+            <li><span class="material-icons" style="font-size: 12px; color: rgb(0, 128, 55);"> check_circle </span> Farmer Contact No.: <span>{{singleCrop.farmerPhone}}</span></li>
+            <li><span class="material-icons" style="font-size: 12px; color: rgb(0, 128, 55);"> check_circle </span> Farmer Rating: <span>{{singleCrop.farmerRating}}</span></li>
+          
+          </ul>
+        </div>             
+      </div>
+    </div>
+  </div>
+
+  <br/>
+  

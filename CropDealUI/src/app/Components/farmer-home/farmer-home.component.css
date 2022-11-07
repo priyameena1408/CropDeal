@@ -1,0 +1,19 @@
+.card.second{
+    padding: 15px;
+    color: #000;
+    
+    margin: auto;
+    height: 95%;
+    box-shadow: 2px 2px 2px 2px #4183c6;
+    border: auto;
+
+}
+.card.second:hover{
+    box-shadow: 2px 2px 2px 2px #4183c6;
+   
+    transform: scale(1.05);
+}
+.outer-div{
+    height: 74%;
+    margin: auto;
+}

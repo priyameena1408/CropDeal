@@ -1,0 +1,71 @@
+{
+  "Version": 1,
+  "Hash": "bKXOuBG2SYOPQdoneqCMhdqeR90pNltFAr2CJCmMqjg=",
+  "Source": "CaseStudy",
+  "BasePath": "_content/CaseStudy",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "CaseStudy\\wwwroot",
+      "Source": "CaseStudy",
+      "ContentRoot": "F:\\CaseStudyFinal\\CropDealFinal\\wwwroot\\",
+      "BasePath": "_content/CaseStudy",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "F:\\CaseStudyFinal\\CropDealFinal\\wwwroot\\image\\football.jpg",
+      "SourceId": "CaseStudy",
+      "SourceType": "Discovered",
+      "ContentRoot": "F:\\CaseStudyFinal\\CropDealFinal\\wwwroot\\",
+      "BasePath": "_content/CaseStudy",
+      "RelativePath": "image/football.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\image\\football.jpg"
+    },
+    {
+      "Identity": "F:\\CaseStudyFinal\\CropDealFinal\\wwwroot\\uploads\\crops\\1\\image.jpg",
+      "SourceId": "CaseStudy",
+      "SourceType": "Discovered",
+      "ContentRoot": "F:\\CaseStudyFinal\\CropDealFinal\\wwwroot\\",
+      "BasePath": "_content/CaseStudy",
+      "RelativePath": "uploads/crops/1/image.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\crops\\1\\image.jpg"
+    },
+    {
+      "Identity": "F:\\CaseStudyFinal\\CropDealFinal\\wwwroot\\uploads\\crops\\2\\image.jpg",
+      "SourceId": "CaseStudy",
+      "SourceType": "Discovered",
+      "ContentRoot": "F:\\CaseStudyFinal\\CropDealFinal\\wwwroot\\",
+      "BasePath": "_content/CaseStudy",
+      "RelativePath": "uploads/crops/2/image.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\crops\\2\\image.jpg"
+    }
+  ]
+}

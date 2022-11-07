@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap');
+
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+body{
+    line-height: 1.5;
+}
+.card-wrapper{
+    max-width: 900px;
+    margin: auto;
+}
+img{
+    width: 100%;
+    display: block;
+}
+
+.w-full{
+    width: 412px;
+    height: 274px;    
+}
+
+.product-content{
+    padding: 2rem 1rem;
+}
+
+.product-title{
+    text-transform: capitalize;
+    position: relative;
+    color: #285d91;
+    margin: 1rem 0;
+}
+
+.product-price{
+    margin: 1rem 0;
+    font-size: 1rem;
+    font-weight: 700;
+}
+.product-price span{
+    font-weight: 400;
+}
+.last-price span{
+    color: #f64749;
+    text-decoration: line-through;
+}
+.new-price span{
+    color: #5cb85c;
+}
+.product-detail h2{
+    color: #12263a;
+    /* padding-bottom: 0.6rem; */
+}
+.product-detail p{
+    font-size: 0.9rem;
+    padding: 0.3rem;
+    opacity: 0.8;
+}
+.product-detail ul{
+    margin: 1rem 0;
+    font-size: 0.9rem;
+}
+.product-detail ul li{
+    margin: 0;
+    list-style: none;
+    background: left center no-repeat;
+    background-size: 18px;
+    /* padding-left: 1.7rem; */
+    margin: 0.4rem 0;
+    font-weight: 600;
+    opacity: 0.9;
+}
+.product-detail ul li span{
+    font-weight: 400;
+}
+
+
+@media screen and (min-width: 992px){
+    .card{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 1.5rem;
+    }
+    .card-wrapper{
+        height: 80%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .product-imgs{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .product-content{
+        padding-top: 0;
+    }
+}
+
+.mat-raised-button.mat-success{
+    color: #f0fff3;
+    background-color: #059527;
+    width: 90px;
+    margin-left: 175px;
+}
+
+section{
+    display: table;
+}
+
+section p{
+    display: table-cell;
+}

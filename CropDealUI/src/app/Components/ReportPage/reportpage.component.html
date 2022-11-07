@@ -1,0 +1,29 @@
+<br/><br/>
+<head>
+    <h1> User Details</h1>
+    </head>
+    <body>
+        <table class="table">
+            <thead>
+              <tr>
+                <th>UserId</th>
+                <th>Name</th>
+                <th>Email Id</th>
+                <th>Role Type</th>
+                <th>Invoice</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let user of users">
+                <td>{{user.userId}}</td>
+                <td>{{user.name}}</td>
+                <td>{{user.email}}</td>
+                <td *ngIf="user.roleId==1">Farmer</td>
+                <td *ngIf="user.roleId==2">Dealer</td>
+                <button [routerLink]="['/invoices',{role:'Farmer',id:user.userId}]" type="submit"  *ngIf="user.roleId==1"  mat-raised-button color="success">View Invoice</button>
+                <button [routerLink]="['/invoices',{role:'Dealer',id:user.userId}]" type="submit"  *ngIf="user.roleId==2"  mat-raised-button color="success">View Invoice</button>
+                
+              </tr>
+            </tbody>
+          </table>
+    </body>

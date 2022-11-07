@@ -1,0 +1,45 @@
+<br/>
+<div class="outer-div">
+    <div class="card">
+    <div class="container rounded bg-white ">
+      <div class="row">
+          <div class="col-md-3 border-right">
+              <div class="d-flex flex-column align-items-center text-center p-3 py-5">
+                <img class="rounded-circle mt-5" src="https://st3.depositphotos.com/15648834/17930/v/600/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg">
+                <br><span *ngIf="role=='Farmer'" class="font-weight-bold">Average Rating : {{rating}}</span><span> </span></div>
+          </div>
+          <div class="col-md-5 border-right">
+              <div class="p-3 py-5">
+                  <div class="d-flex justify-content-between align-items-center mb-3">
+                      
+                  </div><br>
+                  <div class="row mt-2">
+                    <div class="col-md-12"><h3>Name</h3><p>{{this.user.name}}</p></div>
+                  
+                    <div class="col-md-12"><h3>Email</h3><p>{{this.user.email}}</p></div>
+                    <div class="col-md-12"><h3>Phone</h3><p>{{this.user.phone}}</p></div>
+                      
+                      
+                  </div>
+                  <div class="row mt-3">
+                    
+                    <div class="col-md-12"><h3>Full Address</h3><p>{{this.user.address}}</p></div>
+                  </div>
+                  
+                 
+              </div>
+          </div>
+          <div class="col-md-4">
+              <div class="p-3 py-5"><br><br>
+                  <div class="d-flex justify-content-between align-items-center experience"><span style="color: rgb(77, 206, 77);"><h2>Account Details</h2></span></div>
+                  <div class="col-md-12"><h3>Account Number</h3><p>{{this.user.accnumber}}</p></div>
+                  <div class="col-md-12"><h3>Bank Name</h3><p>{{this.user.bankname}}</p></div>
+                  <div class="col-md-12"><h3>Bank IFSC</h3><p>{{this.user.ifsc}}</p></div><br>
+                  <button routerLink="/editProfile" type="button" mat-raised-button color="success">Edit Profile</button>
+              </div>
+          </div>
+      </div>
+    </div>
+    
+    </div>
+</div>

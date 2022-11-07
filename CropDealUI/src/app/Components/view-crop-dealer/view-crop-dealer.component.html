@@ -1,0 +1,105 @@
+<mat-toolbar color="primary">
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+      <mat-icon (click)="this.sideNav.open()"  *ngIf="!sideNav?.opened">menu</mat-icon>
+      <mat-icon (click)="this.sideNav.close()" *ngIf="sideNav?.opened">close</mat-icon>
+  </button>
+    <span>Menu</span>
+    <!-- <input type="text" [(ngModel)]="searchText"> -->
+</mat-toolbar>
+
+
+<mat-sidenav-container>
+    <mat-sidenav #sidenav="matSidenav">
+        <img class="avatar mat-elavation-z8 mt-3 mb-1" src="../assets/images/logo.jpg" alt="">
+        <h4 class="name">Select By Crop Type</h4>
+        <mat-divider></mat-divider>
+
+        <ng-container>
+            <button (click)="getAllCrops()" mat-button class="menu-button">
+                <mat-icon>event_note</mat-icon>
+                <span #id1>All Category</span>
+            </button>
+            <button (click)="filterByType(1)" mat-button class="menu-button">
+                <mat-icon>event_note</mat-icon>
+                <span #id1>Fruits</span>
+            </button>
+            <button (click)="filterByType(3)" mat-button class="menu-button">
+                <mat-icon>event_note</mat-icon>
+                <span #id1>Grains</span>
+            </button>
+            <button (click)="filterByType(2)" mat-button class="menu-button">
+                <mat-icon>event_note</mat-icon>
+                <span #id1>Vegetables</span>
+            </button>
+        </ng-container>
+
+
+    </mat-sidenav>
+    
+
+    <div class="row justify-content-center">
+        <ng-container *ngFor="let item of cropForm ">
+         <div class="col-sm-4 ">
+           <div class="card second" >
+            <img style="height:220px;width:auto" src="{{item.cropImage}}" alt="Image Size 720x400" class="mx-3 mt-3">
+                                    
+            <div class="card-body">
+            <div class="flex justify-between ">
+                <h2 class="tracking-widest text-gray-800 text-sm">Crop : {{item.cropName}}</h2>
+            </div>
+            <h3 *ngIf="item.cropTypeId == 1">Crop Type : Fruit</h3>
+            <h3 *ngIf="item.cropTypeId == 2">Crop Type : Vegetable</h3>
+            <h3 *ngIf="item.cropTypeId == 3">Crop Type : Grain</h3>
+           
+           <h3  >Expected Price : {{item.expectedPrice}}</h3>
+           
+           
+            <h4><p class="leading-relaxed text-base">Quantity Available : {{item.qtyAvailable}}</p></h4>
+            <button type="button" [routerLink]="['/crop-detail',item.cropId]" mat-raised-button color="success">Crop Detail</button>
+            </div>
+           </div>
+         </div>
+        
+        </ng-container>
+       </div>
+
+
+
+
+    <!-- <mat-sidenav-content class="content mat-elevation-z4">
+        <section class="text-gray-600 bg-gray-100 body-font">
+            <div class="container px-5  mx-auto max-w-7x1">
+                <div class="flex flex-wrap w-full mb-0 p-4">
+                    <div class="w-full mb-6 lg:mb-0">
+                        <h1 class="sm:text-4xl text-5xl font-medium title-font mb-2 text-gray-900">{{selectedCropNumber}}</h1>
+                        <div class="h-1 w-60 bg-indigo-500 rounded"></div>
+                    </div>
+                </div>
+
+              
+
+                        <div class="xl:w-1/3 md:w-1/2 p-4">
+                            <div class="bg-white p-6 rounded-lg">
+                                <img class="lg:h-60 xl:h-56 md:h-64 sm:h-72 xs:h-72 h-72  rounded w-full object-cover object-center mb-4" src="../assets/images/tomato.jpg" alt="Image Size 720x400">
+                                <div class="flex justify-between">
+                                    <h3 class="tracking-widest text-indigo-500 text-xs font-medium title-font">Farmer: Priya Gunawat</h3>
+                                    <h4 style="text-overflow: ellipsis; display: -webkit-box;" class="tracking-widest text-gray-800 text-sm">20th october 2022</h4>
+                                </div>
+                                <h2 class="text-lg text-gray-900 font-medium title-font mb-2 overflow-hidden">Tomato <i class='fa fa-rupee red-color'>3000</i></h2>
+                                <p class="leading-relaxed text-base">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit commodi ab enim minus? Saepe, alias.</p>
+                                <span><a class="text-blue-500" href="#" target="_blank">read more....</a></span>
+                                <section>
+                                    <div class="example-label">Free shipping</div>
+                                    <div class="example-button-row">
+                                        <button mat-raised-button color="success">Pay now</button>
+                                </div>
+                                </section>
+                            </div>
+                        </div>
+                    </ng-container>
+                </div>
+            </div>
+        </section>
+    </mat-sidenav-content> -->
+</mat-sidenav-container>
+

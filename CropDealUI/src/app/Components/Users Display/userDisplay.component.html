@@ -1,0 +1,32 @@
+<br/><br/>
+<head>
+<h1> User Details</h1>
+</head>
+<body>
+    <table class="table">
+        <thead>
+          <tr>
+            <th>UserId</th>
+            <th>Name</th>
+            <th>Email Id</th>
+            <th>Phone</th>
+            <th>Role Type</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let user of users">
+            <td>{{user.userId}}</td>
+            <td>{{user.name}}</td>
+            <td>{{user.email}}</td>
+            <td>{{user.phone}}</td>
+            <td *ngIf="user.roleId==1">Farmer</td>
+            <td *ngIf="user.roleId==2">Dealer</td>
+           
+            <button type="submit" (click)="changeStatus(user.userId,user.status)" *ngIf="user.status=='Active'" style="background-color:  rgb(89, 230, 89);" >Active</button>
+            <button type="submit" (click)="changeStatus(user.userId,user.status)" *ngIf="user.status=='Inactive'" style="background-color:  rgb(235, 25, 25);">Inactive</button>
+            
+          </tr>
+        </tbody>
+      </table>
+</body>

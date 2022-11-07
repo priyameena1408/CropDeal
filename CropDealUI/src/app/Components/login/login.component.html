@@ -1,0 +1,68 @@
+<div class="container">
+  <div>
+    <div class="outer-div">
+      <div class="card">
+        <div class="text-center">
+          <h1>Login</h1>
+        </div>
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+          <div class="mb-3">
+            <label for="Email" class="form-label">Email address</label>
+            <input type="email" class="form-control" formControlName="email" id="exampleInputEmail1"
+              aria-describedby="emailHelp" placeholder="Enter your email id">
+            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+            <div *ngIf="f['email'].touched && f['email'].invalid" class="alert alert-danger">Email is Invalid</div>
+            <div *ngIf="submitted && loginForm.controls['email'].errors" class="error">
+              <div class="text-danger" *ngIf="loginForm.controls['email'].errors['required']">Email address is required
+              </div>
+            </div>
+          </div>
+          <div class="mb-3">
+
+            <label for="Password" class="form-label">Password</label>
+            <div class="row">
+              <div class="col-md-10">
+                <input [type]="show_button ? 'text' : 'password'" class="form-control" formControlName="password"
+                  id="Password" placeholder="Password">
+              </div>
+              <div class="col">
+
+                <i [class]="show_eye ? 'fa fa-eye' : 'fa fa-eye-slash'" (click)="showPassword()"> </i>
+              </div>
+            </div>
+            <div *ngIf="f['password'].touched && f['password'].invalid" class="alert alert-danger">Password is Invalid
+            </div>
+            <div *ngIf="submitted && loginForm.controls['password'].errors" class="error">
+              <div class="text-danger" *ngIf="loginForm.controls['password'].errors['required']">Password is required
+              </div>
+            </div>
+          </div>
+          <div>
+            <h4>Select your Role</h4>
+            <div class="dropdown mb-2">
+
+            </div>
+
+            <ul>
+              <select formControlName="userRole" class="form-control">
+                <option value="">Select Role</option>
+
+                <option *ngFor="let role of roles">
+                  {{role}}</option>
+              </select>
+
+            </ul>
+            <div *ngIf="f['userRole'].touched && f['userRole'].invalid" class="alert alert-danger">Role is invalid</div>
+            <div class="text-danger" *ngIf="submitted && f['userRole'].errors?.['required']">Role is required.</div>
+
+
+          </div>
+
+          <button type="submit" mat-raised-button color="success" class="mt-3">Login</button>
+          <a routerLink="/register" style="color: blue;" class="mx-2">Not a User? Click to Register</a>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<br/>

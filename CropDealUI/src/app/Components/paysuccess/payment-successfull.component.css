@@ -1,0 +1,76 @@
+body
+{
+    background:#f2f2f2;
+}
+
+.payment{
+    border:1px solid #f2f2f2;
+    height: 350px;
+    border-radius:20px;
+    background:rgb(255, 255, 255);
+}
+
+.card{
+    border: none;
+}
+   
+.payment_header{
+    background: #7984bb;
+	padding:20px;
+   border-radius:30px 30px 0px 0px;
+}
+   
+.check{
+	margin:0px auto;
+	width:50px;
+    height:50px;
+	border-radius:100%;
+    background:#fff;
+	text-align:center;
+}
+   
+.check i{
+    vertical-align:middle;
+    line-height:50px;
+    font-size:30px;
+}
+
+.content {
+    text-align:center;
+    background-color: #f7efef;
+    height: 420px;
+}
+
+.content  h1 {
+    font-size:25px;
+    padding-top:25px;
+    margin-bottom: 30px;
+}
+
+.content button {
+    width:100px;
+    height: 42px;
+    color:#fff;
+    border-radius:30px;
+    padding:5px 10px;
+    background:#7984bb;
+    transition:all ease-in-out 0.3s;
+}
+
+.content a:hover {
+    text-decoration:none;
+    background:#000;
+}
+
+.fa-check{
+    color: #7984bb;
+}
+   
+.payment_footer{
+    background:#8991bc;
+}
+
+.form-group{
+    width: 332px;
+    margin-left: 200px;
+}

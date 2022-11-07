@@ -1,0 +1,19 @@
+.card{
+    border: none;
+    width: 30%;
+    padding:40px 60px 40px;
+    position:relative;
+    margin: auto;
+    margin-top: 5%;
+    background: rgb(174, 212, 241);
+    background: linear-gradient(90deg, rgb(174, 212, 241) 0%, rgb(203, 183, 245) 100%);
+}
+.container{
+    height: 71%;
+}
+
+.mat-raised-button.mat-success{
+    color: #f0fff3;
+    background-color: #059527;
+    width:40px;
+}

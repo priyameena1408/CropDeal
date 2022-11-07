@@ -1,0 +1,170 @@
+<br /> <br />
+<div class="container">
+  <div>
+    <div>
+      <div class="card">
+        <div class="text-center">
+          <h1>Sign Up</h1>k.
+          <h3>Register Yourself</h3>
+        </div>
+        <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+          <div style="display: inline" class="mb-3">
+            <label for="Name" class="form-label">Name</label>
+            <input type="text" class="form-control" formControlName="name" id="Name" placeholder="Enter your Name">
+            <div *ngIf="submitted && profileForm.controls['name'].errors" class="error">
+              <div class="text-danger" *ngIf="profileForm.controls['name'].errors['required']">Name is required</div>
+            </div>
+          </div>
+
+          <div class="mb-3" style="display: inline">
+            <label for="Email" class="form-label mt-3">Email address</label>
+            <input type="email" class="form-control" formControlName="email" id="exampleInputEmail1"
+              aria-describedby="emailHelp" placeholder="Enter your email id">
+            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+            <div *ngIf="f['email'].touched && f['email'].invalid" class="alert alert-danger">Email is Invalid</div>
+            <div *ngIf="submitted && profileForm.controls['email'].errors" class="error">
+              <div class="text-danger" *ngIf="profileForm.controls['email'].errors['required']">Email address is
+                required</div>
+            </div>
+          </div>
+
+          <div class="mb-3 mt-3">
+            <label for="Password" class="form-label">Password</label>
+            <div class="row">
+              <div class="col-md-10">
+                <input [type]="show_button ? 'text' : 'password'" class="form-control" formControlName="password"
+                  id="Password" placeholder="Password">
+              </div>
+              <div class="col">
+
+                <i [class]="show_eye ? 'fa fa-eye' : 'fa fa-eye-slash'" (click)="showPassword()"> </i>
+              </div>
+            </div>
+            <div *ngIf="f['password'].touched && f['password'].invalid" class="alert alert-danger">Password is Invalid
+            </div>
+            <div *ngIf="submitted && profileForm.controls['password'].errors" class="error">
+              <div class="text-danger" *ngIf="profileForm.controls['password'].errors['required']">Password is required
+              </div>
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <label for="Phone" class="form-label">Phone No</label>
+            <input type="text" class="form-control" formControlName="phoneNo" id="Phone"
+              placeholder="Enter Phone Number">
+            <div *ngIf="f['phoneNo'].touched && f['phoneNo'].invalid" class="alert alert-danger">Phone Number is Invalid
+            </div>
+            <div *ngIf="submitted && profileForm.controls['phoneNo'].errors" class="error">
+              <div class="text-danger" *ngIf="profileForm.controls['phoneNo'].errors['required']">Phone Number is
+                required</div>
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <h4>Select your Role</h4>
+            <div class="dropdown">
+            </div>
+            <ul>
+              <select formControlName="userRole" class="form-control">
+                <option value="">Select Role</option>
+                <option *ngFor="let role of roles">
+                  {{role}}</option>
+              </select>
+            </ul>
+            <div *ngIf="f['userRole'].touched && f['userRole'].invalid" class="alert alert-danger">Role is invalid</div>
+            <div class="text-danger" *ngIf="submitted && f['userRole'].errors?.['required']">Role is required.</div>
+
+          </div>
+
+          <div class="text-center">
+            <h3>Address</h3>
+          </div>
+
+          <div class="mb-3">
+            <label for="address" class="form-label">Address</label>
+            <input type="text" class="form-control" formControlName="address" id="address">
+            <div *ngIf="f['address'].touched && f['address'].invalid" class="alert alert-danger">address is Invalid
+            </div>
+            <div *ngIf="submitted && profileForm.controls['address'].errors" class="error">
+              <div class="text-danger" *ngIf="profileForm.controls['address'].errors['required']">address is required
+              </div>
+            </div>
+          </div>
+
+
+
+          <div class="row">
+            <div class="col">
+              <div class="mb-3">
+                <label for="City" class="form-label">City</label>
+                <input type="text" class="form-control" formControlName="city" id="City">
+                <div *ngIf="f['city'].touched && f['city'].invalid" class="alert alert-danger">city is Invalid</div>
+                <div *ngIf="submitted && profileForm.controls['city'].errors" class="error">
+                  <div class="text-danger" *ngIf="profileForm.controls['city'].errors['required']">city is required
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="col">
+              <div class="mb-3">
+                <label for="State" class="form-label">State</label>
+                <input type="text" class="form-control" formControlName="state" id="State">
+                <div *ngIf="f['state'].touched && f['state'].invalid" class="alert alert-danger">state is Invalid</div>
+                <div *ngIf="submitted && profileForm.controls['state'].errors" class="error">
+                  <div class="text-danger" *ngIf="profileForm.controls['state'].errors['required']">state is required
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="text-center">
+            <h3>Bank Details</h3>
+          </div>
+
+
+          <div class="mb-3">
+            <label for="AccountNumber" class="form-label">Account Number</label>
+            <input type="text" class="form-control" formControlName="accountNumber" id="AccountNumber">
+            <div *ngIf="f['accountNumber'].touched && f['accountNumber'].invalid" class="alert alert-danger">
+              accountNumber is Invalid</div>
+            <div *ngIf="submitted && profileForm.controls['accountNumber'].errors" class="error">
+              <div class="text-danger" *ngIf="profileForm.controls['accountNumber'].errors['required']">accountNumber is
+                required</div>
+            </div>
+          </div>
+
+
+          <div class="mb-3">
+            <label for="IFSC" class="form-label">IFSC Code</label>
+            <input type="text" class="form-control" formControlName="ifscCode" id="IFSC">
+            <div *ngIf="f['ifscCode'].touched && f['ifscCode'].errors?.['pattern']" class="alert alert-danger">ifscCode
+              is Invalid</div>
+            <div *ngIf="submitted && profileForm.controls['ifscCode'].errors" class="error">
+              <div class="text-danger" *ngIf="profileForm.controls['ifscCode'].errors['required']">ifscCode is required
+              </div>
+            </div>
+          </div>
+
+
+          <div class="mb-3">
+            <label for="BankName" class="form-label">Bank Name</label>
+            <input type="text" class="form-control" formControlName="bankName" id="BankName">
+            <div *ngIf="f['bankName'].touched && f['bankName'].invalid" class="alert alert-danger">bankName is Invalid
+            </div>
+            <div *ngIf="submitted && profileForm.controls['bankName'].errors" class="error">
+              <div class="text-danger" *ngIf="profileForm.controls['bankName'].errors['required']">bankName is required
+              </div>
+            </div>
+          </div>
+
+          <button type="submit" mat-raised-button color="success">Register</button>
+          <a routerLink="/login" style="color: blue;" class="mx-4">Already a User? Click to Login</a>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

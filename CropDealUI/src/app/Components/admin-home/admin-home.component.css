@@ -1,0 +1,15 @@
+.card.second{
+    padding: 15px;
+    color: #000;
+    width:auto;
+    margin: auto;
+    box-shadow: 2px 2px 2px 2px #4183c6;
+    border: auto;
+    height: 100%;
+}
+.card.second:hover{
+    box-shadow: 2px 2px 2px 2px #4183c6;
+   
+    transform: scale(1.05);
+}
+

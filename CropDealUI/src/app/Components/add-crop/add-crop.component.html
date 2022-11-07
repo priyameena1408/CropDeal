@@ -1,0 +1,82 @@
+<br />
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <div class="card mx-auto" style="width: 30rem;">
+        <div>
+          <h2 class="card-title text-center mb-1 bolded">Add new crop</h2>
+          <h3 class="text-center">Please enter crop details</h3>
+          <form [formGroup]="addForm" (ngSubmit)="onSubmit()">
+
+            <div class="form-group mb-3">
+              <label class="form-label">Crop Type</label>
+              <select type="text" class="form-select" formControlName="cropType" aria-label="Default select example">
+                <option selected value="">Select crop type</option>
+                <option value="Fruit">Fruit</option>
+                <option value="Vegetable">Vegetable</option>
+                <option value="Grain">Grain</option>
+              </select>
+              <div *ngIf="submitted && addForm.controls['cropType'].errors" class="error">
+                <div class="text-danger" *ngIf="addForm.controls['cropType'].errors['required']">*crop type is required
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group mb-3">
+              <label class="form-label">Crop Name</label>
+              <input type="text" formControlName="cropName" class="form-control">
+              <div *ngIf="submitted && addForm.controls['cropName'].errors" class="error">
+                <div class="text-danger" *ngIf="addForm.controls['cropName'].errors['required']">*crop name is required
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <label>Crop Image</label><br>
+              <input type="file" (change)="onFileSelected($event)">
+              <input type="button" value="upload">
+
+            </div>
+            <br>
+
+            <div class="form-group mb-3">
+              <label class="form-label">Crop Location</label>
+              <input type="text" formControlName="cropLocation" class="form-control">
+              <div *ngIf="submitted && addForm.controls['cropLocation'].errors" class="error">
+                <div class="text-danger" *ngIf="addForm.controls['cropLocation'].errors['required']">*crop location is
+                  required</div>
+              </div>
+            </div>
+
+            <div class="form-group mb-3">
+              <label class="form-label">Quantity Available</label>
+              <input type="number" formControlName="qtyAvailable" class="form-control">
+              <div *ngIf="submitted && addForm.controls['qtyAvailable'].errors" class="error">
+                <div class="text-danger" *ngIf="addForm.controls['qtyAvailable'].errors['required']">*quantity available
+                  is required</div>
+              </div>
+            </div>
+
+            <div class="form-group mb-4">
+              <label class="form-label">Expected Price</label>
+              <input type="number" formControlName="expectedPrice" class="form-control">
+              <div *ngIf="submitted && addForm.controls['expectedPrice'].errors" class="error">
+                <div class="text-danger" *ngIf="addForm.controls['expectedPrice'].errors['required']">*expected price is
+                  required</div>
+              </div>
+            </div>
+
+            <div class="example-button-row form-group">
+              <button type="submit" mat-raised-button color="success">Save</button>&nbsp; &nbsp;
+              <button type="button" mat-raised-button color="danger" type="reset">Cancel</button> &nbsp; &nbsp;
+              <button type="button" routerLink="/farmerhome" mat-raised-button color="warning">Back</button> &nbsp;
+              &nbsp;
+              <!-- [routerLink]="['/view-crop-farmer']" -->
+            </div>
+          </form>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

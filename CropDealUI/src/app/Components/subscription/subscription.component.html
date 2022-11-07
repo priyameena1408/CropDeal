@@ -1,0 +1,39 @@
+<br/><br/>
+<div>
+        <table class="table">
+            <thead>
+              <tr>
+                <th>Crop Type</th>
+                <th>Subscribe/Unsubscribe</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td >Fruit</td>
+                    <td>
+                        <button type="submit" *ngIf="!isSubscribe(1)" (click)="subscribe(1)" style="background-color:  rgb(89, 230, 89);" >Subscribe</button>
+                    
+                        <button type="submit" *ngIf="isSubscribe(1)" (click)="unsubscribe(1)" style="background-color:  rgb(243, 54, 54);" >Unsubscribe</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td >Vegetable</td>
+                    <td>
+                        <button type="submit"*ngIf="!isSubscribe(2)"  (click)="subscribe(2)" style="background-color:  rgb(89, 230, 89);" >Subscribe</button>
+                    
+                        <button type="submit" *ngIf="isSubscribe(2)" (click)="unsubscribe(2)" style="background-color:  rgb(243, 54, 54);" >Unsubscribe</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td >Grain</td>
+                    <td>
+                        <button type="submit" *ngIf="!isSubscribe(3)" (click)="subscribe(3)" style="background-color:  rgb(89, 230, 89);" >Subscribe</button>
+                    
+                        <button type="submit" *ngIf="isSubscribe(3)" (click)="unsubscribe(3)" style="background-color:  rgb(243, 54, 54);" >Unsubscribe</button>
+                    </td>
+            </tr>
+            </tbody>
+
+            </table>
+</div> 
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>

@@ -1,0 +1,77 @@
+<br/>
+<div class="container" >
+  <div >
+      <div >
+          <div class="card">
+              <div class="text-center">
+                  
+                  <h2>Edit Profile</h2>
+              </div>
+              <form *ngIf="EdituserForm" [formGroup]="EdituserForm" (ngSubmit)="SaveChanges()">
+                  
+                    <div class="mb-3"style="display: inline">
+                      <label for="Email" class="form-label">Email address</label>
+                      <input type="email" class="form-control" formControlName="email" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter your email id">
+                      <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                      <div *ngIf="f['email'].touched && f['email'].invalid" class="alert alert-danger">Email is Invalid</div>
+                      <div *ngIf="submitted && EdituserForm.controls['email'].errors" class="error">
+                      <div class="text-danger" *ngIf="EdituserForm.controls['email'].errors['required']">Email address is required</div>
+                    </div>
+                    </div>
+                    
+                    <div class="mb-3">
+                      <label for="Phone" class="form-label">Phone No</label>
+                      <input type="text" class="form-control"formControlName="phone" id="Phone" placeholder="Enter Phone Number">
+                      <div *ngIf="f['phone'].touched && f['phone'].invalid" class="alert alert-danger">Phone Number is Invalid</div>
+                      <div *ngIf="submitted && EdituserForm.controls['phone'].errors" class="error">
+                        <div class="text-danger" *ngIf="EdituserForm.controls['phone'].errors['required']">Phone Number is required</div>
+                      </div>
+                    </div>
+
+                    <div class="text-center">
+                     <h4>Address</h4>
+                    </div>
+                  
+                  <div class="mb-3">
+                    <label for="line" class="form-label">Address</label>
+                    <input type="text" class="form-control"formControlName="line" id="line">
+                  </div>
+                  <div class = "row">
+                    <div class="col">
+                  <div class="mb-3">
+                    <label for="City" class="form-label">City</label>
+                    <input type="text" class="form-control" formControlName="city"id="City">
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="mb-3">
+                    <label for="State" class="form-label">State</label>
+                    <input type="text" class="form-control" formControlName="state"id="State">
+                  </div>
+                </div>
+                  </div>
+
+              
+                  <div class="text-center">
+                   <h4>Bank Details</h4>
+                  </div>
+                  <div class="mb-3">
+                    <label for="AccountNumber" class="form-label">Account Number</label>
+                    <input type="text" class="form-control"formControlName="accountNumber" id="AccountNumber">
+                  </div>
+                  <div class="mb-3">
+                    <label for="IFSC" class="form-label">IFSC Code</label>
+                    <input type="text" class="form-control"formControlName="IFSC" id="IFSC">
+                  </div>
+                  <div class="mb-3">
+                    <label for="BankName" class="form-label">Bank Name</label>
+                    <input type="text" class="form-control"formControlName="bankName" id="BankName">
+                  </div>
+                 
+                  <button type="submit" mat-raised-button color="success">Save Changes</button>
+                  <a  routerLink = "/profile" class="mx-4" style="color: blue;">Don't want to Edit? Go to Profile</a>
+              </form> 
+          </div>
+      </div>
+  </div>
+</div>

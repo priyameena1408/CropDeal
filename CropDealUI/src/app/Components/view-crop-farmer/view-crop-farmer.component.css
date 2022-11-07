@@ -1,0 +1,14 @@
+.card.second{
+    
+    color: #000;
+    margin: 10%;
+    border: auto;
+
+}
+
+.mat-raised-button.mat-success{
+    color: #f0fff3;
+    background-color: #059527;
+    width:80px;
+}
+
